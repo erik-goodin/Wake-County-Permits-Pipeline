@@ -1,0 +1,6 @@
+requests==2.34.2
+geopandas==1.2.0
+shapely==2.2.0
+pandas==3.0.5
+pytest==9.2.0
+hypothesis==6.170.14

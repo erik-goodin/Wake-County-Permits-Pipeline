@@ -1,0 +1,26 @@
+# secrets
+_working/census_key.txt
+*.key
+.env
+
+# raw data and databases (contain mailing addresses / contractor names)
+Data/Raw/
+Data/Clean/*.db
+Data/Clean/model/*.csv
+
+# logs and caches
+_working/refresh_log.txt
+.hypothesis/
+.pytest_cache/
+__pycache__/
+*.tmp
+
+# Power BI: binaries embed the data; backups and scratch copies
+*.pbix
+.pbi/
+Data/Backup/
+Data/Backup_edit/
+Data/_unused/
+
+# Power BI dashboard (hardcodes local file paths)
+Data/Clean/dashboard/
