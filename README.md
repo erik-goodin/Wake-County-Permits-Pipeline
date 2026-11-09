@@ -47,7 +47,7 @@ Tests run the scripts as subprocesses against a temp database, using these envir
 - `PERMITS_ALLOW_SHRINK=1`: let `load_permits.py` load a pull that is more than 5% smaller than the table
 - `PERMITS_URL`, `PERMITS_PAGE`, `PERMITS_WAIT`: endpoint, page size and retry wait (seconds) for `fetch_permits.py`; its tests run it against a local fake server
 
-`mutate.py` is a small AST mutator: it swaps operators and constants, runs the suite per mutant, and lists survivors. Last run: all mutants killed except one unreachable error-message path in `export_model_csv.py`.
+`mutate.py` is a small AST mutator: it swaps operators and constants, runs the suite per mutant, and lists survivors. Last run: all mutants killed except two: an unreachable error-message path in `export_model_csv.py` and an equivalent mutant in `fetch_permits.py`.
 
 **Covered:** `fetch_permits`, `load_permits`, `build_clean`, `build_model`, `export_model_csv`.
 **Not covered:** `fetch_acs`, `load_acs`, `build_point_tract`, `refresh`, and the `check_*` / `profile_*` helpers.
